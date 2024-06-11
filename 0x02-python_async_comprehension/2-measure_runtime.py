@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-""" asyncio.g """
+""" asyncio.gather """
 
 import asyncio
 import random
@@ -8,7 +8,7 @@ async_comprehension = __import__('1-async_comprehension').async_comprehension
 
 
 async def measure_runtime() -> float:
-    """ excuting variable """
+    """ executes comprehension func 4 times in parallel, returns runtime """
 
     start = timeit.default_timer()
     await asyncio.gather(
